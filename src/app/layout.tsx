@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Manrope, Work_Sans } from "next/font/google";
 import "./globals.css";
+import { Preloader } from "@/components/Preloader";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -90,7 +91,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-PT" className={`${manrope.variable} ${workSans.variable}`}>
-      <body className="min-h-screen">{children}</body>
+      <body className="min-h-screen">
+        <Preloader />
+        {children}
+      </body>
     </html>
   );
 }

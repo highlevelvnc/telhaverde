@@ -27,8 +27,8 @@ export function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-out-expo ${
         scrolled
-          ? "border-b border-line/70 bg-white/85 shadow-soft backdrop-blur-md"
-          : "border-b border-transparent bg-white/0"
+          ? "border-b border-line/70 bg-white/92 shadow-soft backdrop-blur-md"
+          : "border-b border-transparent bg-white/85 backdrop-blur-sm lg:bg-white/0 lg:backdrop-blur-none"
       }`}
     >
       {/* Top bar com telefone — desktop */}

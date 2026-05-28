@@ -57,8 +57,8 @@ export function TrustSection() {
             Confiança, segurança e qualidade em cada telhado
           </h2>
           <p data-reveal="up" className="mt-5 text-base leading-relaxed text-ink-500">
-            Não vendemos promessas — entregamos soluções. Veja porque os nossos clientes
-            na Póvoa de Varzim escolhem a Telha Verde.
+            Especialistas que só fazem telhados, com proximidade local e o
+            cuidado de quem assina cada obra.
           </p>
         </div>
 
@@ -73,8 +73,9 @@ export function TrustSection() {
                 <span className="absolute right-6 top-6 font-display text-xs font-semibold tabular-nums text-line-muted">
                   0{i + 1}
                 </span>
-                <span className="inline-flex h-12 w-12 items-center justify-center rounded-md bg-forest-900 text-white transition-transform duration-300 group-hover:scale-105 group-hover:bg-terracotta-500">
+                <span className="relative inline-flex h-12 w-12 items-center justify-center rounded-lg bg-forest-900 text-white shadow-soft transition-all duration-300 group-hover:scale-105 group-hover:bg-terracotta-500 group-hover:shadow-card">
                   <Icon className="h-6 w-6" />
+                  <span aria-hidden className="absolute inset-0 rounded-lg ring-1 ring-white/10" />
                 </span>
                 <h3 className="text-lg font-bold text-forest-900">{title}</h3>
                 <p className="text-sm leading-relaxed text-ink-500">{description}</p>

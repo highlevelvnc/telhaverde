@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "@/lib/gsap";
 import { staggerReveal, refreshTriggers } from "@/lib/scrollReveal";
-import { ArrowRightIcon, PhoneIcon, WhatsAppIcon } from "@/components/ui/Icons";
+import { ArrowRightIcon, CheckIcon, PhoneIcon, WhatsAppIcon } from "@/components/ui/Icons";
 import { COMPANY, WHATSAPP_URL } from "@/lib/constants";
 
 export function CTASection() {
@@ -92,10 +92,21 @@ export function CTASection() {
             </a>
           </div>
 
-          <p data-reveal="up" className="mt-8 text-xs text-white/65">
-            Resposta tipicamente em 24h · Orçamento sem compromisso · {""}
-            <span className="text-white/90">Póvoa de Varzim e arredores</span>
-          </p>
+          <ul data-reveal="up" className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-white/85">
+            {[
+              "Diagnóstico no local",
+              "Sem compromisso",
+              "Resposta em 24h",
+              "Póvoa de Varzim e arredores",
+            ].map((g) => (
+              <li key={g} className="inline-flex items-center gap-2">
+                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-terracotta-500/25 ring-1 ring-terracotta-300/40">
+                  <CheckIcon className="h-3 w-3 text-terracotta-200" />
+                </span>
+                {g}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

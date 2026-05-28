@@ -142,14 +142,14 @@ export function Portfolio() {
                   />
                 </div>
                 <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-forest-950/80 via-forest-950/10 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100" />
+                {/* Tag no topo esquerdo */}
+                <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-terracotta-500/95 px-3 py-1 text-[10px] font-bold uppercase tracking-label-wide text-white shadow-card backdrop-blur-sm">
+                  {it.tag}
+                </span>
+
                 <figcaption className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 p-5 text-white">
-                  <div>
-                    <p className="text-[10px] font-semibold uppercase tracking-label-wide text-terracotta-200">
-                      {it.tag}
-                    </p>
-                    <h3 className="mt-1 font-display text-base font-bold">{it.title}</h3>
-                  </div>
-                  <span className="inline-flex h-9 w-9 translate-y-2 items-center justify-center rounded-full bg-white/10 text-white opacity-0 ring-1 ring-white/20 backdrop-blur-md transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                  <h3 className="font-display text-base font-bold leading-tight drop-shadow-md">{it.title}</h3>
+                  <span className="inline-flex h-9 w-9 translate-y-2 items-center justify-center rounded-full bg-white/15 text-white opacity-0 ring-1 ring-white/20 backdrop-blur-md transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                     <ArrowRightIcon className="h-4 w-4" />
                   </span>
                 </figcaption>

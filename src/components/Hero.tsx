@@ -184,42 +184,56 @@ export function Hero() {
           <div className="relative ml-auto w-full max-w-md">
             <div
               data-reveal="up"
-              className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md"
+              className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.07] p-7 shadow-card-hover backdrop-blur-md"
             >
               <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-terracotta-400/30 blur-3xl" aria-hidden />
-              <p className="text-xs font-semibold uppercase tracking-label-wide text-terracotta-200">Em destaque</p>
-              <h3 className="mt-3 font-display text-xl font-bold text-white">
+              <div className="flex items-center gap-2">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-terracotta-400 opacity-75" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-terracotta-400" />
+                </span>
+                <p className="text-[11px] font-semibold uppercase tracking-label-wide text-terracotta-200">
+                  Disponível agora
+                </p>
+              </div>
+              <h3 className="mt-4 font-display text-xl font-bold leading-snug text-white">
                 Proteja a sua casa de infiltrações e desgaste.
               </h3>
-              <p className="mt-3 text-sm text-white/75">
-                Reparação, limpeza, impermeabilização e substituição de telhas — com
-                garantia de um trabalho que dura.
+              <p className="mt-3 text-sm leading-relaxed text-white/75">
+                Reparação, limpeza, impermeabilização e substituição de telhas
+                — com garantia de um trabalho que dura.
               </p>
 
               <dl className="mt-6 grid grid-cols-3 gap-3">
                 {[
-                  { k: "24h", v: "Resposta rápida" },
+                  { k: "24h", v: "Resposta" },
                   { k: "100%", v: "Compromisso" },
-                  { k: "Local", v: "Póvoa de Varzim" },
+                  { k: "Local", v: "Póvoa Varzim" },
                 ].map((s) => (
-                  <div key={s.v} className="rounded-md bg-white/5 p-3 ring-1 ring-white/10">
+                  <div key={s.v} className="rounded-lg bg-white/[0.06] p-3 ring-1 ring-white/10 transition-colors hover:bg-white/10">
                     <dt className="font-display text-lg font-extrabold text-white">{s.k}</dt>
                     <dd className="mt-1 text-[10px] uppercase tracking-label-wide text-terracotta-200/85">{s.v}</dd>
                   </div>
                 ))}
               </dl>
 
-              <div className="mt-6 flex items-center gap-3 rounded-md border border-white/10 bg-forest-950/40 px-4 py-3">
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#25D366]">
-                  <WhatsAppIcon className="h-4 w-4 text-white" />
+              <a
+                href={`tel:${COMPANY.phoneDigits}`}
+                className="mt-6 flex items-center gap-3 rounded-lg border border-white/10 bg-forest-950/50 px-4 py-3 transition-all duration-300 hover:border-terracotta-400/40 hover:bg-forest-950/70"
+              >
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] ring-2 ring-[#25D366]/30">
+                  <WhatsAppIcon className="h-5 w-5 text-white" />
                 </span>
                 <div className="leading-tight">
-                  <p className="text-[10px] uppercase tracking-label-wide text-white/60">Fale connosco</p>
-                  <a href={`tel:${COMPANY.phoneDigits}`} className="font-display text-base font-bold text-white hover:text-terracotta-200">
+                  <p className="text-[10px] uppercase tracking-label-wide text-white/60">Fale connosco já</p>
+                  <p className="font-display text-base font-bold text-white">
                     {COMPANY.phone}
-                  </a>
+                  </p>
                 </div>
-              </div>
+                <span className="ml-auto text-terracotta-200">
+                  <ArrowRightIcon className="h-4 w-4" />
+                </span>
+              </a>
             </div>
 
             <div aria-hidden className="absolute -bottom-6 -left-6 h-24 w-24 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md" />

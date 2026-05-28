@@ -66,11 +66,14 @@ export function BeforeAfter({
           <Image src={beforeSrc} alt={beforeAlt} fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" style={{ width: containerRef.current?.clientWidth ?? "100%" }} />
         </div>
       </div>
-      <span className="pointer-events-none absolute left-4 top-4 rounded-full bg-forest-900/85 px-3 py-1 text-[10px] font-semibold uppercase tracking-label-wide text-white backdrop-blur-sm">
+      <span className="pointer-events-none absolute left-4 top-4 rounded-full bg-forest-950/85 px-4 py-1.5 text-xs font-bold uppercase tracking-label-wide text-white shadow-card backdrop-blur-sm">
         Antes
       </span>
-      <span className="pointer-events-none absolute right-4 top-4 rounded-full bg-terracotta-500 px-3 py-1 text-[10px] font-semibold uppercase tracking-label-wide text-white backdrop-blur-sm">
+      <span className="pointer-events-none absolute right-4 top-4 rounded-full bg-terracotta-500 px-4 py-1.5 text-xs font-bold uppercase tracking-label-wide text-white shadow-card backdrop-blur-sm">
         Depois
+      </span>
+      <span className="pointer-events-none absolute bottom-4 left-1/2 hidden -translate-x-1/2 items-center gap-2 rounded-full bg-white/95 px-4 py-1.5 text-xs font-semibold text-forest-900 shadow-card backdrop-blur-sm sm:inline-flex">
+        Arraste para comparar
       </span>
       <div className="pointer-events-none absolute inset-y-0" style={{ left: `${pos}%` }}>
         <div className="-translate-x-1/2 absolute inset-y-0 w-px bg-white/90 shadow-card" />

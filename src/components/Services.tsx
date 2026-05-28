@@ -86,13 +86,17 @@ export function Services() {
               <div className="service-card group relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-white p-7 transition-all duration-300 ease-out-expo hover:-translate-y-1.5 hover:border-terracotta-400 hover:shadow-card-hover">
                 <span
                   aria-hidden
-                  className="pointer-events-none absolute inset-0 bg-gradient-to-br from-terracotta-500/0 via-terracotta-500/0 to-terracotta-100 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-br from-terracotta-500/0 via-terracotta-500/0 to-terracotta-100/70 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                 />
+                {/* Canto decorativo terracota */}
+                <span aria-hidden className="pointer-events-none absolute right-0 top-0 h-14 w-14 overflow-hidden">
+                  <span className="absolute -right-7 -top-7 h-14 w-14 rotate-45 bg-terracotta-500/10 transition-colors duration-300 group-hover:bg-terracotta-500/25" />
+                </span>
                 <span aria-hidden className="absolute right-6 top-6 font-display text-xs font-semibold tabular-nums tracking-label-wide text-line-muted">
                   {String(i + 1).padStart(2, "0")}
                 </span>
 
-                <span className="relative inline-flex h-14 w-14 items-center justify-center rounded-md bg-surface-tint text-forest-900 ring-1 ring-line transition-all duration-300 group-hover:bg-forest-900 group-hover:text-white group-hover:ring-forest-900">
+                <span className="relative inline-flex h-14 w-14 items-center justify-center rounded-lg bg-surface-tint text-forest-900 shadow-soft ring-1 ring-line transition-all duration-300 group-hover:-translate-y-0.5 group-hover:bg-forest-900 group-hover:text-white group-hover:shadow-card group-hover:ring-forest-900">
                   <Icon className="h-7 w-7" />
                 </span>
 
