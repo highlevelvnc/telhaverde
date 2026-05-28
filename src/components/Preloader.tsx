@@ -60,9 +60,9 @@ export function Preloader() {
       <div aria-hidden className="pointer-events-none absolute -top-32 left-1/2 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-terracotta-500/15 blur-[140px]" />
       <div aria-hidden className="pointer-events-none absolute -bottom-32 left-1/2 h-[24rem] w-[24rem] -translate-x-1/2 rounded-full bg-forest-600/25 blur-[140px]" />
 
-      {/* logo */}
-      <div className="relative mb-8 flex h-20 w-20 items-center justify-center rounded-2xl bg-white shadow-card-hover ring-1 ring-white/10 pl-logo">
-        <Image src="/logo.png" alt="Telhados Telha Verde" width={64} height={64} style={{ width: "auto", height: "auto" }} className="max-h-16 max-w-16 object-contain" priority />
+      {/* logo — cartão branco pequeno para o texto verde escuro do logo ser visível em fundo escuro */}
+      <div className="relative mb-6 flex h-24 w-32 items-center justify-center rounded-xl bg-white p-3 shadow-card-hover pl-logo">
+        <Image src="/logo.png" alt="Telhados Telha Verde" width={128} height={96} style={{ width: "auto", height: "auto" }} className="max-h-full max-w-full object-contain" priority />
       </div>
 
       {/* SVG do telhado a montar */}

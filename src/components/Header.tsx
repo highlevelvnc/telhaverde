@@ -27,8 +27,8 @@ export function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-out-expo ${
         scrolled
-          ? "border-b border-line/70 bg-white/92 shadow-soft backdrop-blur-md"
-          : "border-b border-transparent bg-white/85 backdrop-blur-sm lg:bg-white/0 lg:backdrop-blur-none"
+          ? "border-b border-line/70 bg-white/95 shadow-soft backdrop-blur-md"
+          : "border-b border-transparent bg-white/90 backdrop-blur-md"
       }`}
     >
       {/* Top bar com telefone — desktop */}
@@ -57,7 +57,7 @@ export function Header() {
       </div>
 
       <div className="container-tight flex h-20 items-center justify-between gap-4">
-        <Logo />
+        <Logo size="lg" />
 
         <nav aria-label="Principal" className="hidden items-center gap-1 lg:flex">
           {NAV_LINKS.map((link) => (
